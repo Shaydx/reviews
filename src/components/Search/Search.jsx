@@ -19,32 +19,6 @@ class Search extends Component {
     });
   }
 
-  // searchHandler = (e) => {
-  //   const searchValue = e.target.value.toLowerCase();
-  //   if (!searchValue) {
-  //     this.setState({
-  //       searchResult: [],
-  //     });
-  //   } else {
-  //     const result = this.state.organisationNames.filter((orgName) => {
-  //       return orgName.toLowerCase().includes(searchValue);
-  //     });
-  //     this.setState({
-  //       searchResult: result,
-  //     });
-  //   }
-
-  //   if (searchValue !== this.state.searchResult || this.state.searchResult.length === 0) {
-  //     this.setState({
-  //       errorMessage: "No Results...",
-  //     });
-  //   } else {
-  //     this.setState({
-  //       errorMessage: null,
-  //     });
-  //   }
-  // };
-
   searchHandler = (e) => {
     const searchValue = e.target.value.toLowerCase();
     if (!searchValue) {
