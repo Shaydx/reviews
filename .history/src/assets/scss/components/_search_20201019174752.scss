@@ -1,0 +1,25 @@
+#frontpage {
+  input[type="search"] {
+    width: 600px;
+    height: 60px;
+    padding: 12px 20px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      outline: none;
+    }
+  }
+
+  .search-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    list-style-type: none;
+
+    width: 600px;
+  }
+}

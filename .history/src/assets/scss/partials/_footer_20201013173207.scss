@@ -1,0 +1,58 @@
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "company social-media";
+  background: $white;
+  padding: $padding;
+
+  .company {
+    grid-area: company;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "logo company-info"
+      "logo copyright"
+      "logo footer-menu";
+
+    .logo {
+      grid-area: logo;
+      align-self: center;
+      background: url(../../img/footer-logo.svg) no-repeat;
+      height: 60px;
+      width: 60px;
+    }
+
+    .company-info {
+      grid-area: company-info;
+      font-weight: 700;
+
+      span {
+        font-weight: 300;
+        margin-left: 0.5rem;
+
+        &::before {
+          content: "\00b7";
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    .copyright {
+      grid-area: copyright;
+    }
+
+    .footer-menu {
+      display: flex;
+      justify-content: space-between;
+      grid-area: footer-menu;
+
+      list-style: none;
+    }
+  }
+
+  .social-media {
+    grid-area: social-media;
+  }
+}

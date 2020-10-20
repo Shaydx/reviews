@@ -1,0 +1,38 @@
+footer {
+  background: $white;
+  padding: $padding;
+
+  .company {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "logo company-info"
+      "logo copyright"
+      "logo footer-menu";
+  }
+
+  .logo {
+    grid-area: logo;
+    align-self: center;
+    background: url(../../img/footer-logo.svg) no-repeat;
+    height: 60px;
+    width: 60px;
+  }
+
+  .company-info {
+    grid-area: company-info;
+  }
+
+  .copyright {
+    grid-area: copyright;
+  }
+
+  .footer-menu {
+    display: flex;
+    grid-area: footer-menu;
+
+    list-style: none;
+  }
+}

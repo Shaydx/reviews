@@ -1,0 +1,12 @@
+input[type="search"] {
+  width: 600px;
+  height: 60px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    outline: none;
+  }
+}

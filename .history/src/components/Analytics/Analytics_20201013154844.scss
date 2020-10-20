@@ -1,0 +1,51 @@
+#analytics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "Logo Analytics";
+
+  .logo {
+    grid-area: Logo;
+  }
+
+  .analytics {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "Gauge Name"
+      "Gauge total-respondents"
+      "Gauge spread";
+    grid-area: Analytics;
+
+    .gauge {
+      grid-area: Gauge;
+    }
+
+    .name {
+      grid-area: Name;
+    }
+
+    .total-respondents {
+      grid-area: total-respondents;
+    }
+
+    .spread {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: 1fr;
+      gap: 0px 0px;
+      grid-template-areas: "detractors passive promoters";
+      grid-area: spread;
+    }
+    .detractors {
+      grid-area: detractors;
+    }
+    .passive {
+      grid-area: passive;
+    }
+    .promoters {
+      grid-area: promoters;
+    }
+  }
+}

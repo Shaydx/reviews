@@ -1,0 +1,21 @@
+main {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  "Content Sidebar"
+  "Comments Sidebar";
+  gap: 30px;
+
+  margin: $margin;
+
+  &:first-of-type {
+    margin: $first-of-type;
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 1rem;
+  background: $white;
+}

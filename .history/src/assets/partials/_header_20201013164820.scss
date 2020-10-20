@@ -1,0 +1,9 @@
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: $white;
+  padding: 1rem 80px;
+}

@@ -1,0 +1,8 @@
+#sidebars {
+    grid-area: Sidebar;
+    margin-bottom: 30px;
+
+    &.container {
+        border-radius: 5px;
+    }
+}

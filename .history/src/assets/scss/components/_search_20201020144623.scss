@@ -1,0 +1,42 @@
+#frontpage {
+  input[type="search"] {
+    width: 600px;
+    height: 60px;
+    padding: 12px 20px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      outline: none;
+    }
+  }
+
+  .search-result-wrapper {
+
+    .search-results {
+      width: 720px;
+      list-style-type: none;
+      text-align: left;
+      background: $white;
+      position: relative;
+      
+      a {
+        text-decoration: none;
+        color: $black;
+      }
+
+      li {
+        padding: 10px 5px;
+        transition: 0.1s all ease-in-out;
+
+        &:hover {
+          transition: 0.1s all ease-in-out;
+          background-color: darken($white, 5%);
+          color: $primary;
+        }
+      }
+    }
+  }
+}

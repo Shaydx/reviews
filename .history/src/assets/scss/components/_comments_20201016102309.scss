@@ -1,0 +1,9 @@
+#comments {
+    grid-area: Comments;
+    display: grid;
+    gap: 10px;
+
+    .container {
+        border-radius: 5px;
+    }
+}

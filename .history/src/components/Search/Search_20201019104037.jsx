@@ -1,0 +1,78 @@
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import Skeleton from "react-loading-skeleton";
+
+const API_URL = "https://sandbox.api.nps.today/reviews/reviewNames/";
+
+class Search extends Component {
+  state = {
+    orgNames: [],
+    searchResult: [],
+  };
+
+  componentDidMount() {
+    fetch(API_URL)
+      .then((res) => res.json())
+      .then((response) => {
+        this.setState({
+          orgNames: response,
+        });
+      });
+  }
+
+  searchHandler = (e) => {
+    const searchValue = e.target.value.toLowerCase();
+    if (!searchValue) {
+      this.setState({
+        searchResult: [],
+      });
+    } else {
+      const result = this.state.orgNames.filter((orgName, key) => {
+        return orgName.toLowerCase().includes(searchValue);
+      });
+
+      this.setState({
+        searchResult: result,
+      });
+    }
+
+    // DELETE THIS!!!!!!!
+    console.log(this.state.searchResult.orgId);
+  };
+
+  render() {
+    return (
+      <div className="container">
+        <div className="form-wrapper">
+          <div className="search-form">
+            <div className="form-group">
+              <input
+                type="search"
+                placeholder="Search for company"
+                onChange={this.searchHandler}
+              />
+              <button type="submit" className="btn btn-primary">
+                Search
+              </button>
+            </div>
+            <div className="form-group">
+              <ul className="searchResults">
+                {this.state.searchResult.map((res, key) => {
+                  return (
+                    <li key={key}>
+                      <Link to={"/r/" + res}>
+                        {res || <Skeleton />}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Search;

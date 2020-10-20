@@ -1,0 +1,13 @@
+#analytics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: " Analytics Logo";
+}
+
+.logo {
+  grid-area: Logo;
+}
+
+.analytics {
+  grid-area: Analytics;
+}

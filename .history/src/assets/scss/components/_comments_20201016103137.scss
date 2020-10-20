@@ -1,0 +1,32 @@
+#comments {
+  grid-area: Comments;
+  display: grid;
+  gap: 10px;
+
+  .container {
+    padding: 2rem;
+    border-radius: 5px;
+    min-height: 150px;
+  }
+
+  .comment {
+    display: grid;
+    grid-template-columns: 20% 90%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "rating user"
+      ". response";
+  }
+
+  .rating {
+    grid-area: rating;
+  }
+
+  .user {
+    grid-area: user;
+  }
+
+  .response {
+    grid-area: response;
+  }
+}

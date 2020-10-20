@@ -1,0 +1,32 @@
+#frontpage {
+  input[type="search"] {
+    width: 600px;
+    height: 60px;
+    padding: 12px 20px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      outline: none;
+    }
+  }
+
+  .search-result-wrapper {
+    display: flex;
+    justify-content: center;
+
+    .search-results {
+      width: 720px;
+      list-style-type: none;
+      text-align: left;
+
+      li {
+        &:hover {
+          background-color: darken($white, 10%);
+        }
+      }
+    }
+  }
+}

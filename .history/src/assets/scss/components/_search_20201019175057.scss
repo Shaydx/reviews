@@ -1,0 +1,26 @@
+#frontpage {
+  input[type="search"] {
+    width: 600px;
+    height: 60px;
+    padding: 12px 20px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      outline: none;
+    }
+  }
+
+  .search-results {
+    margin: 0 auto;
+    width: 600px;
+
+    ul {
+      margin: 0 !important;
+      list-style-type: none;
+      text-align: left;
+    }
+  }
+}

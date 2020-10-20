@@ -1,0 +1,11 @@
+#comments {
+    grid-area: Comments;
+    display: grid;
+    gap: 10px;
+
+    .container {
+        padding: $padding;
+        border-radius: 5px;
+        min-height: 150px;
+    }
+}

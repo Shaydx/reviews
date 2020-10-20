@@ -1,0 +1,28 @@
+#content-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-areas: "main aside";
+  gap: 30px;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas:
+    "Content"
+    "Comments";
+  gap: 30px;
+}
+
+aside {
+  grid-area: aside;
+  gap: 30px;
+}
+
+.container {
+  width: 100%;
+  padding: 1rem;
+  background: $white;
+}

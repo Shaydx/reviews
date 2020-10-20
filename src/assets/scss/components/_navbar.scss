@@ -1,0 +1,26 @@
+nav {
+  display: flex !important;
+  background: #fff;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-self: flex-end;
+    align-items: center;
+
+    li {
+      list-style: none;
+      padding: 10px 20px;
+
+      a {
+        text-decoration: none;
+
+        &.current-menu-item {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
